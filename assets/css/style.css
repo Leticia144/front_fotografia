@@ -180,6 +180,9 @@ body {
 }
 
 
+
+
+
 /*  ESTILO PADRÃO (REUTILIZAVEL)*/
 
 .container {
@@ -187,7 +190,7 @@ body {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -212,10 +215,26 @@ body {
   transform: scale(1.05);
 }
 
-.nav-toggle-btn,
-.dropdown-menu {
-  display: none;
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: black;
+  margin-left: 1rem;
+  transition: trasform 0.2s ease, color 0.3s ease;
+
+
 }
+
+.search-btn:hover {
+  transform: scale(1.2);
+  color: black;
+}
+
+
+
 
 
 
@@ -229,6 +248,14 @@ body {
 
 }
 
+.nav-toggle-btn,
+.dropdown-menu{
+  display: none;
+}
+
+
+
+
 .header {
   position: absolute;
   top: 0;
@@ -240,6 +267,8 @@ body {
   box-shadow: var(--shadow);
 
 }
+
+
 
 .header.active {
   position: fixed;
@@ -256,3 +285,116 @@ body {
   }
 
 }
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.navbar {
+  position: relative;
+  right: 12px;
+  left: 12px;
+  background-color:  #daa520;
+  padding:0 15px;
+}
+
+
+.navbar-link {
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-size: var(--fs-8);
+  font-weight: var(--weight-semiBold);
+  color: black;
+  transition: color 0.3s ease;
+
+}
+
+
+.navbar-link:hover {
+  color: var(--white-color);
+}
+
+.navbar,
+.navbar.active{
+  all: unset;
+  display: block;
+}
+
+.navbar-list {
+  display: flex;
+}
+
+.navbar-item {
+  border: none;
+}
+
+.header .btn {
+  display: grid;
+  text-align: center;
+}
+
+.dropdown_toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+
+
+
+.dropdown-item {
+  position: relative;
+
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: #daa520;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  min-width: 180px;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  z-index: 10;
+
+}
+
+
+.dropdown-link {
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  font-size: var(--fs-8);
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', 'sans-serif';
+  transition: backgound 0.3s, color 0.3s;
+
+
+}
+
+.dropdown-link:hover {
+  background: var(--gradient);
+  color: black;
+}
+
+.dropdown-item.active .dropdown-menu {
+  display: flex;
+}
+
+
+
+.banner  video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
