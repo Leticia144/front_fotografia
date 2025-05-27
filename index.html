@@ -119,12 +119,18 @@
 
 </header>
 
+
+
     <!--BANNER-->
 
 <section class="banner">
     <video autoplay muted loop>
         <source src="assets/videos/9218233-hd_1920_1080_30fps.mp4">
     </video>
+
+
+
+    <!--SOBRE-->
 
 </section>
 
@@ -149,9 +155,7 @@
 
 
 
-
-
-    <!--galeria de imagens-->
+    <!--GALERIA DE IMAGENS-->
 
     <section class="section gallery" id="Álbuns">
 
@@ -175,22 +179,21 @@
         <a href="#" class="btn-ver-mais" title="Ver Galeria">
             <ion-icon name="arrow-forward-outline"></ion-icon>
         </a>
-       
 
     </div>
+
+
+
+    <!--LIGHTBOX-->
 
     <div class="lightbox" id="lightbox">
         <img src="" alt="imagem ampliada" id="lightbox-img"/>
     </div>
 
-
     </section>
 
 
-                                     <!--SERVIÇOS-->
-
-
-
+     <!--SERVIÇOS-->
 
         <section class="section service" aria-label="service">
             <div class="container-serv">
@@ -242,7 +245,7 @@
 
 
 
-                    <!--IMAGEM CENTRO-->
+                    <!--IMAGEM DO CENTRO-->
 
                     <li class="service-banner">
                         <figure>
@@ -299,89 +302,111 @@
 
                     </li>
 
-
-
-
-
-
-
-
-
-
-
-
                 </ul>
 
-
-
             </div>
+
         </section>
 
 
-        <!--LOGIN-->
+       <!-- LOGIN -->
 
+       <section class="container-login">
+        <div class="wrapper">
+            <span class="bg-animate"></span>
+            <span class="bg-animate2"></span>
 
-        <section class="container-login">
-            <div class="wrapper">
-                <div class="form-box Login">
-                    <h2>Login</h2>
+            <div class="form-box login">
+                <h2 class="animation">Login</h2>
 
-
-
-
-
-               
 
                 <form action="#">
-                    <div class="input-box">
-                        <input type="text" required>
+                    <div class="input-box animation">
+                        <input type="text" required/>
                         <label>Usuário</label>
                         <ion-icon name="person"></ion-icon>
-
                     </div>
 
-                    <div class="input-box">
-                        <input type="text" required>
+                    <div class="input-box animation">
+                        <input type="password" required>
                         <label>Senha</label>
                         <ion-icon name="lock-closed"></ion-icon>
                     </div>
 
+                    <button type="submit" class="btn btn-login animation">Entrar</button>
 
-
-                    <button type="submit" class="btn btn-login">Entrar</button>
-
-                    <div class="logreg-link">
+                    <div class="logreg-link animation">
                         <p>
-                            Não possui uma conta?
-                            <a href="#" class="registrer-link">Clique aqui</a>
+                            Não possui uma conta? 
+                            <a href="#" class="register-link">Clique aqui!</a>
                         </p>
-                
                     </div>
 
-
-
-
                 </form>
-
-          
 
 
             </div>
 
 
+            <!--Texto login-->
+
+            <div class="info-text login">
+                <h2>Bem-vindo de volta!</h2>
+                <p>A pele é sua. A atitude também</p>
+            </div>
+
+            <!-- Cadastro -->
+
+            <div class="form-box register">
+                <h2>Crie Conta</h2>
+
+                <form action="#">
+                    <div class="input-box">
+                        <input type="text" required/>
+                        <label>Nome</label>
+                        <ion-icon name="person"></ion-icon>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" required/>
+                        <label>Email</label>
+                        <ion-icon name="person"></ion-icon>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password" required>
+                        <label>Senha</label>
+                        <ion-icon name="lock-closed"></ion-icon>
+                    </div>
+
+                    <button type="submit" class="btn btn-login">Cadastrar</button>
+
+                    <div class="logreg-link">
+                        <p>
+                            Já possui uma conta? 
+                            <a href="#" class="login-link">Clique aqui!</a>
+                        </p>
+                    </div>
+
+                </form>
+
+
+            </div>
+
+            <div> 
+                      <!--Texto login-->
+
+            <div class="info-text register">
+                <h2>Bem-vindo de volta!</h2>
+                <p>A pele é sua. A atitude também</p>
+            </div>
+
+
+
+            </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-        </section>
-
+    </section>
 
 
 
@@ -409,14 +434,6 @@
  <!--icons-->
  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-
-
-
- 
-
-
-
 
 </body>
 </html>

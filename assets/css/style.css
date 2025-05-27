@@ -547,7 +547,7 @@ body {
 .botao-ver-mais {
   display: flex;
   justify-content: flex-end;
-  margin: 15px 5% 50px;
+  margin: 20px 5% 40px;
 }
 
 .btn-ver-mais {
@@ -556,7 +556,7 @@ body {
   gap: 8px;
   border: 2px solid var(--gold-color);
   color: var(--gold-color);
-  padding: 21px 20px;
+  padding: 12px 20px;
   background-color: transparent;
   text-decoration: none;
   font-weight: var(--weight-bold);
@@ -615,7 +615,8 @@ body {
   
   }
   
-  /*apliar img*/
+  /*ampliar img*/
+
   @keyframes zoomIn{
   to{
   opacity: 1;
@@ -633,7 +634,7 @@ body {
   }
 
 
-
+  /*SERVIÇOS*/
 
   .service-banner {
     display: block;
@@ -643,13 +644,9 @@ body {
      /*3 linhas*/
   }
 
-
-
   .service {
     padding-block-end: 0;
   }
-
-
 
   .container-serv {
     padding-inline: 25px;
@@ -657,8 +654,6 @@ body {
     margin: 0 auto;
    
   }
-
-
 
   .service-list{
     display: grid;
@@ -689,8 +684,12 @@ body {
   .card-text {
     line-height: 1.2;
     font-size: 18px;
+    color: #0e0e0e;
   }
 
+  .card-title {
+    color: #0e0e0e;
+  }
 
   .service-card .card-title {
     font-size: 32px;
@@ -710,24 +709,20 @@ body {
 
   .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px  #daa520;
+    box-shadow: 0 12px 24px  rgba(0, 0, 0 ,0.2);
   }
+  /*LOGIN*/
 
-
-
-
-  /*Login*/
-
-  .container-login {
+  .container-login{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0 auto;
-    background: var(--white-color);
+    background: var(--black-color-lighten);
 
-    /*abir em tela cheia o login*/
 
+    /*Abrir em tela cheia login*/
     position: fixed;
     top: 0;
     left: 0;
@@ -735,75 +730,56 @@ body {
     height: 100vh;
     display: none;
     z-index: 1000;
+  }
 
+  .container-login.active{
+    display: flex;
   }
 
 
-.container-login.active {
-  display: flex;
-
-}
-
-
-
-
-
-
-
-  .wrapper {
+  .wrapper{
     position: relative;
     width: 750px;
     height: 450px;
     background: transparent;
     border: 2px solid var(--gold-color);
-
+    overflow: hidden;
   }
 
-
-  .wrapper .form-box {
+  .wrapper .form-box{
     position: absolute;
     top: 0;
     width: 50%;
     height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #bbb;
   }
 
-
   .form-box h2 {
-
     font-size: var(--fs-2);
     color: var(--white-color);
     text-align: center;
-
-
   }
 
-  
-
-  .form-box .input-box {
-    position: relative ;
+  .form-box .input-box{
+    position: relative;
     width: 100%;
     height: 50px;
     margin: 25px 0;
   }
 
-
-  .input-box input {
+  .input-box input{
     width: 100%;
     height: 100%;
-    background:transparent;
+    background: transparent;
     outline: none;
-    border-bottom: 2px solid var( --gold-color);
+    border-bottom: 2px solid var(--white-color);
     color: var(--white-color);
     font-size: 16px;
+    padding-right: 23px;
   }
 
-
-
-  .input-box label {
+  .input-box label{
     position: absolute;
     top: 50%;
     left: 0;
@@ -811,8 +787,9 @@ body {
     color: var(--white-color);
     transform: translateY(-50%);
     transition: 0.5s;
-
+    pointer-events: none;
   }
+
 
   .input-box ion-icon {
     position: absolute;
@@ -825,6 +802,165 @@ body {
   }
 
 
+  .btn-login{
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .btn:hover{
+    transform: scale(1.05) !important;
+  }
+
+
+  .form-box .logreg-link{
+    font-size: 14px;
+    color: var(--white-color);
+    text-align: center;
+    margin: 20px 0 10px;
+  }
+
+  .logreg-link{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logreg-link p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .logreg-link p a {
+    color: var(--gold-color);
+    font-weight: var(--weight-semiBold);
+  }
+
+  .logreg-link p a:hover {
+    text-decoration: underline;
+  }
+
+  .wrapper .form-box.login {
+    left: 0;
+    padding: 0 60px 0 40px;
+   
+  }
+
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label {
+    top: -5px;
+    color: var(--gold-color);
+    
+  }
+
+  .input-box input:focus ~ ion-icon,
+  .input-box input:valid ~ ion-icon {
+    top: -5px;
+    color: var(--gold-color);
+    
+  }
+
+  .wrapper .info-text{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-text h2 {
+    font-size: 32px;
+    color: var(--white-color);
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .info-text p{
+    font-size: 16px;
+    color: var(--white-color);
+  }
+
+  .wrapper .info-text.login{
+    right: 0;
+    text-align: right;
+    padding: 100px 40px 0 100px;
+   
+
+  }
+
+  .wrapper .bg-animate{
+    position: absolute;
+    background: var(--gradient1);
+    top: 0;
+    right: 0;
+    width: 850px;
+    height: 600px;
+    transform: rotate(10deg) skewY(40deg);
+    transform-origin: bottom right;
+    border-bottom: 3px solid var(--gold-color);
+  }
+
+
+  .wrapper .bg-animate2 {
+    position: absolute;
+    background: #0e0e0e;
+    top: 100%;
+    left: 250px;
+    width: 850px;
+    height: 700px;
+    /*transform: rotate(-11deg) skewY(-44deg);*/
+    transform: rotate(0deg) skewY(0deg);
+    transform-origin: bottom left;
+    border-bottom: 3px solid var(--gold-color);
+  }
+
+  .wrapper .form-box.register{
+    right: 0;
+    padding: 0 40px 0 60px;
+    display: none;
+  }
+
+  .wrapper .info-text.register {
+    left: 0; 
+    text-align: left;
+    padding: 100px 150px 0 40px;
+    display: none;
+  }
+
+  /*.info-text h2 {
+    margin-bottom: ;
+  }*/
+
+.wrapper.active .form-box.login .animation {
+  transform: translateX(-140%);
+}
+
+.wrapper .form-box.login .animation {
+  transition: 0.7s ease;
+  transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*SOBRE*/ 
   
 .container-sobre {
   max-width: 1200px;
@@ -870,6 +1006,19 @@ body {
   text-align: center;
   font-size: var(--fs-6);
 }
+
+  .about-content .btn {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    max-width: 180px;
+  }
+
+
+
+
+
+
 
 .efeito {
   -webkit-mask-image: linear-gradient(to bottom, black  90%, transparent 100%);
