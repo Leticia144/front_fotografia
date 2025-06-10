@@ -925,6 +925,7 @@ body {
   }
 
   .wrapper .info-text.register {
+
     left: 0; 
     text-align: left;
     padding: 100px 150px 0 40px;
@@ -936,13 +937,48 @@ body {
   }*/
 
 .wrapper.active .form-box.login .animation {
+
   transform: translateX(-140%);
+  transition-delay: calc(0.1s * var(--i));
 }
 
 .wrapper .form-box.login .animation {
+
   transition: 0.7s ease;
   transform: translateX(0);
 }
+
+
+.wrapper .info-text.login .animation {
+
+  transform: translateX(0);
+  transition: 0.7s ease;
+}
+
+.wrapper.active .info-text.login .animation {
+
+  transform: translateX(140%);
+  transition-delay: calc(0.1s * var(--i));
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
